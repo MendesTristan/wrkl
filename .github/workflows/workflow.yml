@@ -42,10 +42,10 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-    - name: Merge dev into master
+    - name: Merge dev into main
       if: success()
       run: |
-          git fetch origin master
-          git checkout master
+          git fetch origin main
+          git checkout main
           git merge dev -X theirs --allow-unrelated-histories
-          git push origin master
+          git push origin main
